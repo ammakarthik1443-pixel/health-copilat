@@ -1,0 +1,21 @@
+.navbar { height:74px; display:flex; align-items:center; justify-content:space-between; padding:0 28px 0 30px; background:rgba(255,255,255,.94); border-bottom:1px solid #e5edfa; position:sticky; top:0; z-index:20; }
+.brand { display:flex; align-items:center; gap:13px; color:#082e83; font-weight:800; font-size:27px; letter-spacing:-.9px; }
+.brand-mark { display:grid; place-items:center; width:47px; height:47px; color:white; background:linear-gradient(145deg,#1683ff,#0649d7); border-radius:15px 15px 19px 19px; }
+.nav-user { display:flex; align-items:center; gap:11px; color:#081b46; }
+.icon-button { display:grid; place-items:center; background:transparent; border:0; color:inherit; cursor:pointer; }
+.notification { width:38px; height:38px; margin-right:8px; }
+.avatar { width:43px; height:43px; border-radius:50%; background:#d8e7ff; color:#355b98; display:grid; place-items:center; }
+.user-name { font-size:14px; font-weight:600; }
+.mobile-menu,.sidebar-close { display:none; }
+@media(max-width:700px) {
+ .navbar { height:64px; padding:0 14px; }
+ .mobile-menu { display:grid; width:35px; height:35px; margin-right:8px; }
+ .brand { margin-right:auto; gap:8px; font-size:18px; letter-spacing:-.5px; }
+ .brand-mark { width:36px; height:36px; border-radius:11px; }
+ .brand-mark svg { width:24px; }
+ .nav-user { gap:6px; }
+ .notification { margin-right:1px; width:30px; }
+ .avatar { width:34px; height:34px; }
+ .avatar svg { width:21px; }
+ .user-name,.nav-user > svg { display:none; }
+}

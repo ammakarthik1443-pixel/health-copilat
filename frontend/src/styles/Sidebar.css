@@ -1,0 +1,26 @@
+.sidebar { width:243px; position:fixed; top:74px; bottom:0; left:0; z-index:10; background:linear-gradient(180deg,#f9fbff 0%,#eff6ff 100%); border-right:1px solid #e8f0fc; display:flex; flex-direction:column; justify-content:space-between; padding:22px 8px; }
+.sidebar-nav { display:grid; gap:8px; }
+.nav-item { width:100%; min-height:58px; border:0; border-radius:12px; background:transparent; display:flex; align-items:center; gap:21px; padding:0 24px; color:#10234d; cursor:pointer; text-align:left; font-size:15px; position:relative; }
+.nav-item svg { color:#35557f; flex-shrink:0; }
+.nav-item:hover { background:#eaf2ff; }
+.nav-item.active { background:linear-gradient(100deg,#d9e9ff,#e3efff); color:#064ee0; font-weight:600; }
+.nav-item.active svg { color:#075ce9; }
+.nav-item.active::before { content:""; width:4px; position:absolute; left:0; top:0; bottom:0; background:#0865ff; border-radius:8px 0 0 8px; }
+.assistant-card { margin:12px 4px 0; padding:0 22px 15px; border-radius:16px; background:linear-gradient(145deg,#e4f2ff,#f0f8ff); color:#123d88; overflow:hidden; }
+.assistant-card h3 { margin:5px 0 7px; color:#0b2457; font-size:17px; line-height:1.45; }
+.assistant-card p { margin:0; font-size:15px; line-height:1.42; }
+.mini-robot { height:100px; width:130px; position:relative; margin:-4px auto 0; }
+.robot-antenna { position:absolute; top:0; left:63px; height:18px; width:2px; background:#1682ef; transform:rotate(-18deg); }
+.robot-antenna::before { content:""; position:absolute; top:-3px; left:-3px; width:8px; height:8px; border-radius:50%; background:#1682ef; }
+.robot-face { position:absolute; top:16px; left:14px; width:100px; height:62px; border:3px solid #1682ef; border-radius:42% 42% 44% 44%; background:linear-gradient(145deg,#fff,#c9e5ff); box-shadow:0 6px 14px #8dbcf266; display:flex; justify-content:center; align-items:center; gap:23px; }
+.robot-face i { width:12px; height:15px; background:#0bd5ef; border-radius:50%; }
+.robot-face b { position:absolute; bottom:11px; width:18px; height:7px; border-bottom:3px solid #0bd5ef; border-radius:50%; }
+.robot-body { position:absolute; top:72px; left:37px; width:55px; height:37px; border-radius:18px 18px 0 0; background:#d9ecff; border:2px solid #88c6ff; }
+.sidebar-scrim { display:none; }
+@media(max-width:1250px) { .sidebar { width:218px; } .nav-item { gap:13px; padding:0 17px; } }
+@media(max-width:700px) {
+ .sidebar { top:0; width:260px; transform:translateX(-105%); transition:transform .22s; z-index:40; padding-top:18px; box-shadow:8px 0 25px #08285d20; }
+ .sidebar.sidebar-open { transform:translateX(0); }
+ .sidebar-scrim { display:block; position:fixed; inset:0; z-index:35; background:#071a3d55; border:0; }
+ .sidebar-close { display:grid; margin:0 10px 12px auto; width:34px; height:34px; }
+}

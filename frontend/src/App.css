@@ -1,0 +1,6 @@
+@import './styles/Navbar.css';
+@import './styles/Sidebar.css';
+@import './styles/Dashboard.css';
+@import './styles/Components.css';
+
+.app-shell { min-height:100vh; }
